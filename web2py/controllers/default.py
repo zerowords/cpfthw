@@ -1,9 +1,20 @@
 def index():
+
+    ''' Makes a db query to select all the notes, 
+    orders the notes by the publication date and 
+    returns a dictionary to the template, containing 
+    all the notes.'''
+
     response.flash = "Welcome to the index view!"
     notes = db(db.notes).select(orderby=db.notes.pub_date)    
     return dict(notes=notes)
      
 def create():
+
+    ''' Generates a form corresponding to the model and 
+        renders it, if the form sends some data, the function 
+        validates the data and saves the data in the database.'''
+        
     response.flash = "This is the create page"
     form=SQLFORM(db.notes)
     if form.process().accepted:
@@ -16,6 +27,11 @@ def create():
 
 
 def edit():
+
+    ''' The function pre-populates the data from the note instance
+        that has been requested to be edited and renders it,
+        once client sends in some data, it saves it in the database.'''
+        
     note = db.notes(request.args(0)) or redirect(URL('error'))
     form=SQLFORM(db.notes, note, deletable = True)
     if form.validate():
@@ -28,6 +44,9 @@ def edit():
     else:
         response.flash = 'Something went wrong!'
     return dict(form=form)    
+    
+    
+    # ALL THE FUNCTIONS BELOW ARE AUTO GENERATED
     
 def user():
     """

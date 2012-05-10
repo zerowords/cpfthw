@@ -78,6 +78,12 @@ use_janrain(auth,filename='private/janrain.key')
 ## >>> rows=db(db.mytable.myfield=='value').select(db.mytable.ALL)
 ## >>> for row in rows: print row.id, row.myfield
 #########################################################################
+
+# ALL THE CONTENT ABOVE IS AUTO GENERATED
+
+''' We create a table notes, with the columns title, description, author,
+subject and a publication date. '''
+
 db.define_table('notes',
                 Field('title', length=200, required=True, requires=IS_NOT_EMPTY()),
                 Field('description', length=2000, required=True, requires=IS_NOT_EMPTY()),
