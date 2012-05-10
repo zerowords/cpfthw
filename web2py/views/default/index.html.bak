@@ -1,0 +1,12 @@
+<h1> Hello World, welcome to the Notes App!! </h1>
+<p> You can do the following over here: </p>
+
+<h1><a href= "{{=URL(r=request, f='create')}}">Create Notes</a></h1>
+
+{{ for note in notes: }}
+<h3>{{=note.title}}</h3>
+<h4>{{=note.description}}</h4>
+<ul>
+<li><a href= "{{=URL(r=request, f='edit', args=note.id)}}"> Edit Notes </a></li>
+</ul>
+{{pass}}
