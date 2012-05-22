@@ -1,0 +1,8 @@
+This is a simple flask application, that performs CRUD operations. 
+
+        1. make a virtualenv
+            2. ``pip install -r requirements.txt``
+                3. ``python manage.py initdb``
+                    4. ``python manage.py runserver``
+
+the documentation is available at blog.fruiapps.com
