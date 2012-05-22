@@ -1,0 +1,11 @@
+<p> Welcome </p>
+${renderer.begin()}
+<div class="field">
+    ${renderer.errorlist("name")}
+    ${renderer.text("name", size=30)}
+</div>
+....
+<div class="buttons">
+    ${renderer.submit("submit", "Submit")}
+</div>
+${renderer.end()}

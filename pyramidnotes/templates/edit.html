@@ -1,0 +1,11 @@
+${renderer.begin(request.resource_url(request.root, 'add'))}
+${renderer.csrf_token()}
+<div class="field">
+    ${renderer.errorlist("name")}
+    ${renderer.text("name", size=30)}
+</div>
+....
+<div class="buttons">
+    ${renderer.submit("submit", "Submit")}
+</div>
+${renderer.end()}
