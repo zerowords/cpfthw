@@ -1,0 +1,38 @@
+#describe {margin:0 20%}
+#FAQ {background:#bfe2f9}
+#FAQ {color:navy}
+#splash {display: inline} 
+#splash {font-family:"Courier New"}
+#splash {font-weight:bold}
+#splash {font-style:oblique}
+#splash {color:#83002c}
+#splashSub {display: inline} 
+#splashSub {font-variant:small-caps}
+#inputdata {margin:0 20%}
+#inputdata {background:#bfe2f9}
+#addinput {margin:0 20%}
+#addinput {background:#bfe2f9}
+#trouble {margin:0 20%}
+#trouble {background:#a7d6d5}
+#addinfo {margin:0 20%}
+#addinfo {background:#bfe2f9}
+#comment {margin:0 20%}
+#comment {background:#bfe2f9}
+#response {margin:0 20%}
+#response {background:#fc9}
+h1 {font-size: 20px;}
+.emph {font-weight: bold;}
+#example {margin:0 10%}
+#example  {text_indent: 1.5em}
+#header {font-family:"Courier New"; font-size: 20px; text-align: center; font-style: oblique; font-weight:bold;}
+/* Sortable tables */
+table.sortable thead {
+    background-color:#eee;
+    color:#666666;
+    font-weight: bold;
+    cursor: default;
+}
+table {border:8px red;}
+td{padding:3px}
+ol {text-indent:18px;
+    list-style-type: decimal}

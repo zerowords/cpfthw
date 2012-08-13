@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+    <center>
+    <h1>Create your own Notebook</h1>
+  </center>
+    <div id="inputdata">
+<form action="" method="post">
+  <br>
+<input type="hidden" name="user_ID" value="{{user_ID}}"></input><br/>
+<label>Notebook name (Make it unusual to keep others from seeing it, and use no spaces, and case counts)</label>
+<input type="textbox" name="ID" size="30" value="{{ ID }}"></input><br/>
+<label>Any more information you want to add to the Notebook</label>
+<textarea name="moreinfo" cols="50"> </textarea><br/>
+  <input type="submit" value=submit />
+</form>
+</div>
+
+{% endblock content %}

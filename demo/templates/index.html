@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block content %}
+<center>
+    <h1>Create or edit your own Notebook or Notes</h1>
+  </center>
+  {% if userHasNotebook %}
+<p> You can edit any Notebook in this list below: </p>
+    <ul>
+{% for page in pages %}
+<li><a href="/editnotebook/{{ page }}">  {{ page }} </a></li>
+{% endfor %}
+</ul>
+  {% endif %}
+
+  {% if user %}
+  <br />
+  <!--a href="/createnotebook">here. </a-->
+<p> You can create a Notebook </p>
+<form action="" method="post">
+<input type="hidden" name="isUser" value="True"></input>
+<label>Notebook name (no spaces and case counts)</label>
+<input type="textbox" name="ID" size="30" value=""></input><br/>
+  <input type="submit" value=submit />
+</form>
+<br />
+<p> 
+To view or edit a Note (<emph>even your own</emph>) you must
+    be signed out.
+</p>
+{% else %}
+
+  <br />
+<label>To access notes enter the notebook name below</label>
+<form action="" method="post">
+<input type="hidden" name="isUser" value=""></input><br/>
+<label>Notebook name (no spaces and case counts)</label>
+<input type="textbox" name="ID" size="30" value=""></input><br/>
+  <input type="submit" value=submit />
+</form>
+  {% endif %}
+
+  <br />
+  <br />
+  <center>
+<a href="{{ url }}">{{ url_linktext }}</a>{{url_linktextmore}}
+  </center>
+
+
+{% endblock content %}

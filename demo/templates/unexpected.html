@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+This unexpected result occurred: <emph style="font-weight: bold">{{ trans.reason }}</emph>
+<br /><br />
+<label>Click the "Ok" button and to go back to the previous page so you can edit your entry .
+</label>
+<form action="" method="post">
+<input type="hidden" name="reason" value=""></input><br />
+  <input type="submit" value="Ok"/>
+</form>
+
+{% endblock content %}
